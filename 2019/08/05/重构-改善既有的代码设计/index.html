@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="重构，改善既有的代码设计 以下将以6次重构的操作来实现一个简单的案例。例子：这是一个影片出租店用的程序，计算每一个顾客的消费金额并打印详单。操作者告诉程序：顾客租了哪些影片，租期多长，程序便根据租赁时间和影片的类型算出费用。影片分为三类：普通片，儿童片和新片。除了计算费用，还要为常客计算积分，积分会根据租片的种类是否为新片而有所不同。   首先提个问题：什么时候重构？ 看代码实现上面案例如下：Mo">
+<meta name="description" content="以下将以6次重构的操作来实现一个简单的案例。例子：这是一个影片出租店用的程序，计算每一个顾客的消费金额并打印详单。操作者告诉程序：顾客租了哪些影片，租期多长，程序便根据租赁时间和影片的类型算出费用。影片分为三类：普通片，儿童片和新片。除了计算费用，还要为常客计算积分，积分会根据租片的种类是否为新片而有所不同。   首先提个问题：什么时候重构？ 看代码实现上面案例如下：Movie.java（影片实体">
 <meta property="og:type" content="article">
-<meta property="og:title" content="国哥的博客">
+<meta property="og:title" content="重构，改善既有的代码设计">
 <meta property="og:url" content="http://yoursite.com/2019/08/05/重构-改善既有的代码设计/index.html">
 <meta property="og:site_name" content="国哥的博客">
-<meta property="og:description" content="重构，改善既有的代码设计 以下将以6次重构的操作来实现一个简单的案例。例子：这是一个影片出租店用的程序，计算每一个顾客的消费金额并打印详单。操作者告诉程序：顾客租了哪些影片，租期多长，程序便根据租赁时间和影片的类型算出费用。影片分为三类：普通片，儿童片和新片。除了计算费用，还要为常客计算积分，积分会根据租片的种类是否为新片而有所不同。   首先提个问题：什么时候重构？ 看代码实现上面案例如下：Mo">
+<meta property="og:description" content="以下将以6次重构的操作来实现一个简单的案例。例子：这是一个影片出租店用的程序，计算每一个顾客的消费金额并打印详单。操作者告诉程序：顾客租了哪些影片，租期多长，程序便根据租赁时间和影片的类型算出费用。影片分为三类：普通片，儿童片和新片。除了计算费用，还要为常客计算积分，积分会根据租片的种类是否为新片而有所不同。   首先提个问题：什么时候重构？ 看代码实现上面案例如下：Movie.java（影片实体">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/08/05/res/15_01_25__11_05_2018.jpg">
-<meta property="og:updated_time" content="2019-08-05T07:14:33.331Z">
+<meta property="og:updated_time" content="2019-08-05T07:26:27.473Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="国哥的博客">
-<meta name="twitter:description" content="重构，改善既有的代码设计 以下将以6次重构的操作来实现一个简单的案例。例子：这是一个影片出租店用的程序，计算每一个顾客的消费金额并打印详单。操作者告诉程序：顾客租了哪些影片，租期多长，程序便根据租赁时间和影片的类型算出费用。影片分为三类：普通片，儿童片和新片。除了计算费用，还要为常客计算积分，积分会根据租片的种类是否为新片而有所不同。   首先提个问题：什么时候重构？ 看代码实现上面案例如下：Mo">
+<meta name="twitter:title" content="重构，改善既有的代码设计">
+<meta name="twitter:description" content="以下将以6次重构的操作来实现一个简单的案例。例子：这是一个影片出租店用的程序，计算每一个顾客的消费金额并打印详单。操作者告诉程序：顾客租了哪些影片，租期多长，程序便根据租赁时间和影片的类型算出费用。影片分为三类：普通片，儿童片和新片。除了计算费用，还要为常客计算积分，积分会根据租片的种类是否为新片而有所不同。   首先提个问题：什么时候重构？ 看代码实现上面案例如下：Movie.java（影片实体">
 <meta name="twitter:image" content="http://yoursite.com/2019/08/05/res/15_01_25__11_05_2018.jpg">
 
 
@@ -127,7 +127,7 @@
 
 
 
-  <title> | 国哥的博客</title>
+  <title>重构，改善既有的代码设计 | 国哥的博客</title>
   
 
 
@@ -283,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">重构，改善既有的代码设计</h1>
         
 
         <div class="post-meta">
@@ -333,8 +333,7 @@
       
 
       
-        <h1 id="重构，改善既有的代码设计"><a href="#重构，改善既有的代码设计" class="headerlink" title="重构，改善既有的代码设计"></a>重构，改善既有的代码设计</h1><hr>
-<h4 id="以下将以6次重构的操作来实现一个简单的案例。"><a href="#以下将以6次重构的操作来实现一个简单的案例。" class="headerlink" title="以下将以6次重构的操作来实现一个简单的案例。"></a>以下将以6次重构的操作来实现一个简单的案例。</h4><p>例子：这是一个影片出租店用的程序，计算每一个顾客的消费金额并打印详单。操作者告诉程序：顾客租了哪些影片，租期多长，程序便根据租赁时间和影片的类型算出费用。影片分为三类：普通片，儿童片和新片。除了计算费用，还要为常客计算积分，积分会根据租片的种类是否为新片而有所不同。</p>
+        <h4 id="以下将以6次重构的操作来实现一个简单的案例。"><a href="#以下将以6次重构的操作来实现一个简单的案例。" class="headerlink" title="以下将以6次重构的操作来实现一个简单的案例。"></a>以下将以6次重构的操作来实现一个简单的案例。</h4><p>例子：这是一个影片出租店用的程序，计算每一个顾客的消费金额并打印详单。操作者告诉程序：顾客租了哪些影片，租期多长，程序便根据租赁时间和影片的类型算出费用。影片分为三类：普通片，儿童片和新片。除了计算费用，还要为常客计算积分，积分会根据租片的种类是否为新片而有所不同。</p>
 <hr>
 <ul>
 <li>首先提个问题：什么时候重构？</li>
@@ -420,6 +419,22 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/05/排序算法/" rel="prev" title="排序">
+                排序 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
       
@@ -492,7 +507,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -529,7 +544,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重构，改善既有的代码设计"><span class="nav-number">1.</span> <span class="nav-text">重构，改善既有的代码设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#以下将以6次重构的操作来实现一个简单的案例。"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">以下将以6次重构的操作来实现一个简单的案例。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Movie-java（影片实体类）"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">Movie.java（影片实体类）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rental-java-租赁类"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">Rental.java(租赁类)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Customer-java-顾客租赁类"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">Customer.java(顾客租赁类)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#以上代码实现完全没有问题，但是能如果遇到以下这两个问题，就会突出臃肿，可扩展性差，难以维护等缺点了。"><span class="nav-number">1.0.0.4.1.</span> <span class="nav-text">以上代码实现完全没有问题，但是能如果遇到以下这两个问题，就会突出臃肿，可扩展性差，难以维护等缺点了。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分解并重组statement"><span class="nav-number">1.0.0.4.2.</span> <span class="nav-text">分解并重组statement()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改函数名称-参数名称"><span class="nav-number">1.0.0.4.3.</span> <span class="nav-text">修改函数名称/参数名称</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#搬移函数（移动到它该到的地方去）"><span class="nav-number">1.0.0.4.4.</span> <span class="nav-text">搬移函数（移动到它该到的地方去）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rental-java类"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">Rental.java类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重构（四）"><span class="nav-number">1.0.1.</span> <span class="nav-text">重构（四）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#提炼函数-越细小的函数功能越明确-去除临时变量-使结构更清晰"><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">提炼函数(越细小的函数功能越明确)/去除临时变量(使结构更清晰)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rental-java类-1"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">Rental.java类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#多态来提炼switch-语句"><span class="nav-number">1.0.1.1.1.</span> <span class="nav-text">多态来提炼switch()语句</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Movie-java类"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">Movie.java类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Price-java类"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">Price.java类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NewReleasePrice-java类"><span class="nav-number">1.0.1.4.</span> <span class="nav-text">NewReleasePrice.java类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#继承"><span class="nav-number">1.0.1.4.1.</span> <span class="nav-text">继承</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NewReleasePrice-java类-1"><span class="nav-number">1.0.1.5.</span> <span class="nav-text">NewReleasePrice.java类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#以下将以6次重构的操作来实现一个简单的案例。"><span class="nav-number">1.</span> <span class="nav-text">以下将以6次重构的操作来实现一个简单的案例。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Movie-java（影片实体类）"><span class="nav-number">2.</span> <span class="nav-text">Movie.java（影片实体类）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rental-java-租赁类"><span class="nav-number">3.</span> <span class="nav-text">Rental.java(租赁类)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Customer-java-顾客租赁类"><span class="nav-number">4.</span> <span class="nav-text">Customer.java(顾客租赁类)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#以上代码实现完全没有问题，但是能如果遇到以下这两个问题，就会突出臃肿，可扩展性差，难以维护等缺点了。"><span class="nav-number">4.1.</span> <span class="nav-text">以上代码实现完全没有问题，但是能如果遇到以下这两个问题，就会突出臃肿，可扩展性差，难以维护等缺点了。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分解并重组statement"><span class="nav-number">4.2.</span> <span class="nav-text">分解并重组statement()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改函数名称-参数名称"><span class="nav-number">4.3.</span> <span class="nav-text">修改函数名称/参数名称</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#搬移函数（移动到它该到的地方去）"><span class="nav-number">4.4.</span> <span class="nav-text">搬移函数（移动到它该到的地方去）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rental-java类"><span class="nav-number">5.</span> <span class="nav-text">Rental.java类</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#重构（四）"><span class="nav-number"></span> <span class="nav-text">重构（四）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#提炼函数-越细小的函数功能越明确-去除临时变量-使结构更清晰"><span class="nav-number">0.1.</span> <span class="nav-text">提炼函数(越细小的函数功能越明确)/去除临时变量(使结构更清晰)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rental-java类-1"><span class="nav-number">1.</span> <span class="nav-text">Rental.java类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#多态来提炼switch-语句"><span class="nav-number">1.1.</span> <span class="nav-text">多态来提炼switch()语句</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Movie-java类"><span class="nav-number">2.</span> <span class="nav-text">Movie.java类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Price-java类"><span class="nav-number">3.</span> <span class="nav-text">Price.java类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NewReleasePrice-java类"><span class="nav-number">4.</span> <span class="nav-text">NewReleasePrice.java类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#继承"><span class="nav-number">4.1.</span> <span class="nav-text">继承</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NewReleasePrice-java类-1"><span class="nav-number">5.</span> <span class="nav-text">NewReleasePrice.java类</span></a></li></div>
             
 
           </div>
@@ -583,7 +598,7 @@
       <i class="fa fa-eye"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
     </span>
-</div>
+    </div>
 
         
 
