@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Context 抽象类,activity，service, application都是其子类因此一个应用程序中 Context 的数量等于 Activity 和 Service 的数量加1。 Context的主要功能为:  1)启动Activity2）启动和停止Service3）发送广播消息(Intent)4）注册广播消息(Intent)接收者5）可以访问APK中各种资源(如Resources和A">
+<meta name="description" content="Context是一个抽象类,activity,service,application都是其子类,因此一个应用程序中 Context 的数量等于 Activity 和 Service 的数量加1。  Context的主要功能为:  1)启动Activity2）启动和停止Service3）发送广播消息(Intent)4）注册广播消息(Intent)接收者5）可以访问APK中各种资源(如Resource">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Context上下文简述">
 <meta property="og:url" content="http://yoursite.com/2019/08/15/Context/index.html">
 <meta property="og:site_name" content="国哥的博客">
-<meta property="og:description" content="Context 抽象类,activity，service, application都是其子类因此一个应用程序中 Context 的数量等于 Activity 和 Service 的数量加1。 Context的主要功能为:  1)启动Activity2）启动和停止Service3）发送广播消息(Intent)4）注册广播消息(Intent)接收者5）可以访问APK中各种资源(如Resources和A">
+<meta property="og:description" content="Context是一个抽象类,activity,service,application都是其子类,因此一个应用程序中 Context 的数量等于 Activity 和 Service 的数量加1。  Context的主要功能为:  1)启动Activity2）启动和停止Service3）发送广播消息(Intent)4）注册广播消息(Intent)接收者5）可以访问APK中各种资源(如Resource">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-15T08:12:11.204Z">
+<meta property="og:updated_time" content="2019-08-15T08:22:01.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Context上下文简述">
-<meta name="twitter:description" content="Context 抽象类,activity，service, application都是其子类因此一个应用程序中 Context 的数量等于 Activity 和 Service 的数量加1。 Context的主要功能为:  1)启动Activity2）启动和停止Service3）发送广播消息(Intent)4）注册广播消息(Intent)接收者5）可以访问APK中各种资源(如Resources和A">
+<meta name="twitter:description" content="Context是一个抽象类,activity,service,application都是其子类,因此一个应用程序中 Context 的数量等于 Activity 和 Service 的数量加1。  Context的主要功能为:  1)启动Activity2）启动和停止Service3）发送广播消息(Intent)4）注册广播消息(Intent)接收者5）可以访问APK中各种资源(如Resource">
 
 
 
@@ -331,16 +331,34 @@
       
 
       
-        <p>Context 抽象类,activity，service, application都是其子类<br>因此一个应用程序中 Context 的数量等于 Activity 和 Service 的数量加1。</p>
-<p>Context的主要功能为:</p>
+        <p>Context是一个抽象类,activity,service,application都是其子类,因此一个应用程序中 Context 的数量等于 Activity 和 Service 的数量加1。</p>
+<ul>
+<li><p>Context的主要功能为:</p>
 <blockquote>
 <p>1)启动Activity<br>2）启动和停止Service<br>3）发送广播消息(Intent)<br>4）注册广播消息(Intent)接收者<br>5）可以访问APK中各种资源(如Resources和AssetManager等)<br>6）可以访问Package的相关信息<br>7）APK的各种权限管理</p>
 </blockquote>
-<p>// 返回当前进程的单实例全局Application对象的Context,指向的是Context<br>public abstract Context getApplicationContext();</p>
-<p>//返回由构造函数指定或setBaseContext()设置的上下文。<br>getBaseContext() </p>
-<p>//getApplication()只能在Activity和Service里使用，指向的是Application对象<br>getApplication()</p>
-<p>很重要的一点，activity的context对象在activity销毁的时候，context也会跟着销毁,所以持有activity对象没有及时销毁可能造成内存泄漏。</p>
-<p>Intent也要求指出上下文，如果是activity的上下文就会把启动的activity关联当前的activity，如果是application的context，那么启动就需要<br>添加Intent.FLAG_ACTIVITY_NEW_TASK标志，否则会报错。相当于重新创建了一个新的栈。</p>
+</li>
+</ul>
+<ul>
+<li><p>返回当前进程的单实例全局Application对象的Context,指向的是Context</p>
+<blockquote>
+<p>public abstract Context getApplicationContext();</p>
+</blockquote>
+</li>
+<li><p>返回由构造函数指定或setBaseContext()设置的上下文。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> the base context as set by the constructor or setBaseContext</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> Context <span class="title">getBaseContext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> mBase;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>getApplication()只能在Activity和Service里使用，指向的是Application对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/** Return the application that owns this activity. */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> Application <span class="title">getApplication</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> mApplication;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>很重要的一点，activity的context对象在activity销毁的时候，context也会跟着销毁,所以持有activity对象没有及时销毁可能造成内存泄漏。</p>
+<blockquote>
+<p>解决方案就是使用applicationContext代替activity的context</p>
+</blockquote>
+</li>
+<li><p>Intent也要求指出上下文，如果是activity的上下文就会把启动的activity关联当前的activity，如果是application的context，那么启动就需要添加Intent.FLAG_ACTIVITY_NEW_TASK标志，否则会报错。相当于重新创建了一个新的栈。</p>
+</li>
+</ul>
 
       
     </div>
