@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="国哥的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="解压视频及同步音频流程分析 数据 -&amp;gt; 子线程解码原始数据到SafeQueue&amp;lt;AVPacket *&amp;gt;队列中 -&amp;gt; 解码器返回解码到输出数据到SafeQueue&amp;lt;AVFrame *&amp;gt; frame_queue 队列 -&amp;gt; 取切片数据dst_data返回给窗口window -&amp;gt; 比较当前视频时间戳与当前帧音频时间戳 -&amp;gt; 处理视频延时或者追赶处理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Context上下文简述">
+<meta property="og:url" content="http://yoursite.com/2019/08/27/视频解码与同步音频/index.html">
 <meta property="og:site_name" content="国哥的博客">
+<meta property="og:description" content="解压视频及同步音频流程分析 数据 -&amp;gt; 子线程解码原始数据到SafeQueue&amp;lt;AVPacket *&amp;gt;队列中 -&amp;gt; 解码器返回解码到输出数据到SafeQueue&amp;lt;AVFrame *&amp;gt; frame_queue 队列 -&amp;gt; 取切片数据dst_data返回给窗口window -&amp;gt; 比较当前视频时间戳与当前帧音频时间戳 -&amp;gt; 处理视频延时或者追赶处理">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-27T08:02:37.145Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="国哥的博客">
+<meta name="twitter:title" content="Context上下文简述">
+<meta name="twitter:description" content="解压视频及同步音频流程分析 数据 -&amp;gt; 子线程解码原始数据到SafeQueue&amp;lt;AVPacket *&amp;gt;队列中 -&amp;gt; 解码器返回解码到输出数据到SafeQueue&amp;lt;AVFrame *&amp;gt; frame_queue 队列 -&amp;gt; 取切片数据dst_data返回给窗口window -&amp;gt; 比较当前视频时间戳与当前帧音频时间戳 -&amp;gt; 处理视频延时或者追赶处理">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/27/视频解码与同步音频/">
 
 
 
 
 
-  <title>Archive | 国哥的博客</title>
+  <title>Context上下文简述 | 国哥的博客</title>
   
 
 
@@ -140,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -246,247 +250,168 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/27/视频解码与同步音频/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lewis">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="国哥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Context上下文简述</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-27T15:23:33+08:00">
+                2019-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Um..! 6 posts in total. Keep on posting.
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/27/视频解码与同步音频/" itemprop="url">
-              
-                <span itemprop="name">Context上下文简述</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-27T15:23:33+08:00" content="2019-08-27">
-          08-27
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/15/Context/" itemprop="url">
-              
-                <span itemprop="name">Context上下文简述</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-15T16:07:52+08:00" content="2019-08-15">
-          08-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h4 id="解压视频及同步音频流程分析"><a href="#解压视频及同步音频流程分析" class="headerlink" title="解压视频及同步音频流程分析"></a>解压视频及同步音频流程分析</h4><ul>
+<li>数据 -&gt; 子线程解码原始数据到SafeQueue&lt;AVPacket *&gt;队列中 -&gt; 解码器返回解码到输出数据到SafeQueue&lt;AVFrame *&gt; frame_queue 队列 -&gt; 取切片数据dst_data返回给窗口window -&gt; 比较当前视频时间戳与当前帧音频时间戳 -&gt; 处理视频延时或者追赶处理 -&gt; 达到音视频同步</li>
+</ul>
+<h6 id="开始之前先掌握以下几个概念"><a href="#开始之前先掌握以下几个概念" class="headerlink" title="开始之前先掌握以下几个概念"></a>开始之前先掌握以下几个概念</h6><ul>
+<li>音视频同步是以音频时间为准，通过减缓视频渲染或者丢帧加快视频渲染的操作来达到同步，但同步不是绝对的，是相对的同步，即相差的时间非常短。</li>
+<li>需要两个子线程来处理工作，一个packet线程用来解码，一个frame线程用来同步渲染视频</li>
+<li>把AVPacket数据解码需要用到这个方法avcodec_send_packet</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//avcodec.h</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Supply raw packet data as input to a decoder.</span></span><br><span class="line"><span class="comment"> * ... </span></span><br><span class="line"><span class="comment"> * /</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">int avcodec_send_packet(AVCodecContext *avctx, const AVPacket *avpkt);</span></span><br></pre></td></tr></table></figure>
 
-        
-        
+<ul>
+<li>从解码器返回输出到数据给到AVFrame结构体队列中,frame_queue.enQueue(frame);</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Return decoded output data from a decoder.</span></span><br><span class="line"><span class="comment"> * ...</span></span><br><span class="line"><span class="comment"> * /</span></span><br><span class="line"><span class="comment"> </span></span><br><span class="line"><span class="comment">int avcodec_receive_frame(AVCodecContext *avctx, AVFrame *frame);</span></span><br></pre></td></tr></table></figure>
 
-        
+<ul>
+<li>sws_scale方法, 获得切片数据dst[], 和slice宽高</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Scale the image slice in srcSlice and put the resulting scaled</span></span><br><span class="line"><span class="comment"> * slice in the image in dst. A slice is a sequence of consecutive</span></span><br><span class="line"><span class="comment"> * rows in an image.</span></span><br><span class="line"><span class="comment"> * ...</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sws_scale</span><span class="params">(struct SwsContext *c, <span class="keyword">const</span> uint8_t *<span class="keyword">const</span> srcSlice[],</span></span></span><br><span class="line"><span class="function"><span class="params">              <span class="keyword">const</span> <span class="keyword">int</span> srcStride[], <span class="keyword">int</span> srcSliceY, <span class="keyword">int</span> srcSliceH,</span></span></span><br><span class="line"><span class="function"><span class="params">              uint8_t *<span class="keyword">const</span> dst[], <span class="keyword">const</span> <span class="keyword">int</span> dstStride[])</span></span>;</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<ul>
+<li>av_q2d方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Convert an AVRational to a `double`.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> a AVRational to convert</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> `a` in floating-point form</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@see</span> av_d2q()</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> inline <span class="keyword">double</span> <span class="title">av_q2d</span><span class="params">(AVRational a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.num / (<span class="keyword">double</span>) a.den;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/05/View的加载与绘制源码分析/" itemprop="url">
-              
-                <span itemprop="name">Android View的加载与绘制源码分析</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-05T15:43:31+08:00" content="2019-08-05">
-          08-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<blockquote>
+<p>项目链接地址： <a href="https://github.com/lgq895767507/QuickPlay" target="_blank" rel="noopener">https://github.com/lgq895767507/QuickPlay</a></p>
+</blockquote>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/05/红黑树/" itemprop="url">
-              
-                <span itemprop="name">红黑树</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-05T15:31:14+08:00" content="2019-08-05">
-          08-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/05/排序算法/" itemprop="url">
-              
-                <span itemprop="name">排序</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-05T15:21:26+08:00" content="2019-08-05">
-          08-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/05/重构-改善既有的代码设计/" itemprop="url">
-              
-                <span itemprop="name">重构，改善既有的代码设计</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-05T14:27:07+08:00" content="2019-08-05">
-          08-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/15/Context/" rel="next" title="Context上下文简述">
+                <i class="fa fa-chevron-left"></i> Context上下文简述
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -494,6 +419,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -514,8 +443,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -557,6 +495,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#解压视频及同步音频流程分析"><span class="nav-number">1.</span> <span class="nav-text">解压视频及同步音频流程分析</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#开始之前先掌握以下几个概念"><span class="nav-number">1.0.1.</span> <span class="nav-text">开始之前先掌握以下几个概念</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -693,6 +647,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
