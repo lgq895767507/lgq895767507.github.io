@@ -81,20 +81,20 @@
 
 <meta name="description" content="startActivity执行的时候跨进程了吗？ 如果是跨进程，那么是于哪个进程通信呢？ service, broadcast这些呢？  binder的概念 Binder是android提供的一种IPC机制，Binder通信机制类似于C/S架构，除了C/S架构外，还有一个管理全局的ServiceManager   穿梭于各个进程之间的binder   servicemanager 的作用是什么？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="binder驱动分析">
+<meta property="og:title" content="binder驱动">
 <meta property="og:url" content="http://yoursite.com/2019/12/20/binder/index.html">
 <meta property="og:site_name" content="国哥的博客">
 <meta property="og:description" content="startActivity执行的时候跨进程了吗？ 如果是跨进程，那么是于哪个进程通信呢？ service, broadcast这些呢？  binder的概念 Binder是android提供的一种IPC机制，Binder通信机制类似于C/S架构，除了C/S架构外，还有一个管理全局的ServiceManager   穿梭于各个进程之间的binder   servicemanager 的作用是什么？">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/12/20/res/serviceManager.png">
+<meta property="og:image" content="http://yoursite.com/2019/res/serviceManager.png">
 <meta property="og:image" content="http://yoursite.com/2019/12/20/res/component.png">
 <meta property="og:image" content="http://yoursite.com/2019/12/20/res/IServiceManager.png">
 <meta property="og:image" content="http://yoursite.com/2019/12/20/res/mediaplayerservice.png">
-<meta property="og:updated_time" content="2020-01-08T06:15:31.194Z">
+<meta property="og:updated_time" content="2020-01-08T06:36:10.720Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="binder驱动分析">
+<meta name="twitter:title" content="binder驱动">
 <meta name="twitter:description" content="startActivity执行的时候跨进程了吗？ 如果是跨进程，那么是于哪个进程通信呢？ service, broadcast这些呢？  binder的概念 Binder是android提供的一种IPC机制，Binder通信机制类似于C/S架构，除了C/S架构外，还有一个管理全局的ServiceManager   穿梭于各个进程之间的binder   servicemanager 的作用是什么？">
-<meta name="twitter:image" content="http://yoursite.com/2019/12/20/res/serviceManager.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/res/serviceManager.png">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>binder驱动分析 | 国哥的博客</title>
+  <title>binder驱动 | 国哥的博客</title>
   
 
 
@@ -286,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">binder驱动分析</h1>
+          <h1 class="post-title" itemprop="name headline">binder驱动</h1>
         
 
         <div class="post-meta">
@@ -344,7 +344,7 @@
 <h4 id="binder的概念"><a href="#binder的概念" class="headerlink" title="binder的概念"></a>binder的概念</h4><ul>
 <li>Binder是android提供的一种IPC机制，Binder通信机制类似于C/S架构，除了C/S架构外，还有一个管理全局的ServiceManager</li>
 </ul>
-<p><img src="../res/serviceManager.png" alt="avatar"></p>
+<p><img src="../../../res/serviceManager.png" alt="avatar"></p>
 <h4 id="穿梭于各个进程之间的binder"><a href="#穿梭于各个进程之间的binder" class="headerlink" title="穿梭于各个进程之间的binder"></a>穿梭于各个进程之间的binder</h4><ul>
 <li><p><img src="../res/component.png" alt="avatar"></p>
 </li>
